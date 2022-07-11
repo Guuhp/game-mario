@@ -11,8 +11,8 @@ const jump = () => {
 const loop = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
   /* pegando a posição do mario 
-  formatando para numero tirando o px
-  O + CONVERTE STRING PARA NUMERO*/
+    formatando para numero tirando o px
+    O + CONVERTE STRING PARA NUMERO*/
   const marioPosition = +window
     .getComputedStyle(mario)
     .bottom.replace("px", "");
@@ -20,6 +20,9 @@ const loop = setInterval(() => {
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 95) {
     pipe.style.animation = "none";
     pipe.style.left = `${pipePosition}px`;
+
+    mario.style.animation = "none";
+    mario.style.bottom = `${marioPosition}px`;
   }
 }, 10);
 
