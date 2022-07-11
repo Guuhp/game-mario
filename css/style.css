@@ -25,9 +25,10 @@
   /* animano para o cano sair da tela
   precisamos que ele vá de o a 100 px  */
   /*   right: -80px;8*/
-
 }
-.pipe-anime{animation: pipe-animation 1.5s infinite ease-out;}
+.pipe-anime {
+  animation: pipe-animation 1.5s infinite ease-out;
+}
 
 .mario {
   width: 130px;
@@ -46,14 +47,31 @@
 }
 
 .butt {
-width: 100px;
-height: 50px;
+  width: 100px;
+  height: 50px;
 }
 
 @media (max-width: 768px) {
   .game-board {
     width: 100%;
     height: 250px;
+  }
+  .clouds {
+    position: absolute;
+    width: 200px;
+    animation: clouds-animation 10s infinite linear;
+  }
+  .pipe {
+    /* deixando o cano posicionado embaixo */
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+ 
+  }
+  .mario {
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
   }
 }
 
