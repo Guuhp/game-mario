@@ -2,6 +2,15 @@ const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const butt = document.querySelector(".butt");
 
+const imagem = document.getElementsByTagName("img")[2];
+const start = () => {
+  //adiciona a class dark-mode nas tag
+  imagem.classList.toggle(pipeanime);
+  /* h1.classList.toggle(darkModeClass);
+  body.classList.toggle(darkModeClass);
+  footer.classList.toggle(darkModeClass); */
+};
+
 const jump = () => {
   mario.classList.add("jump");
 
@@ -35,3 +44,5 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener("keydown", jump);
+
+const pipeanime = "pipe-anime";
